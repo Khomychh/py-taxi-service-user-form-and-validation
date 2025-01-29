@@ -10,7 +10,7 @@ from taxi.models import Driver, Car
 def for_clean_license_number(cleaned_data: str) -> str:
     license_number = cleaned_data
 
-    if len(license_number) > 8:
+    if len(license_number) != 8:
         raise forms.ValidationError("Consist only of 8 characters")
 
     if not re.match(r"^[A-Z]{3}", license_number):
