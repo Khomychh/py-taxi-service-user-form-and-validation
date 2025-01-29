@@ -87,6 +87,7 @@ def car_driver_add(request: HttpRequest, pk: int) -> HttpResponse:
         Car.objects.get(id=pk).drivers.add(request.user)
     return redirect("taxi:car-detail", pk=pk)
 
+
 @login_required
 def car_driver_remove(request: HttpRequest, pk: int) -> HttpResponse:
     if request.user in Car.objects.get(id=pk).drivers.all():

@@ -52,5 +52,5 @@ class CarForm(forms.ModelForm):
     )
 
     class Meta:
-        model = Driver
+        model = Car
         fields = "__all__"
