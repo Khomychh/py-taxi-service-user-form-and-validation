@@ -4,7 +4,7 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 
-from taxi.models import Driver
+from taxi.models import Driver, Car
 
 
 def for_clean_license_number(cleaned_data: str) -> str:
